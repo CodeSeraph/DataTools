@@ -1,0 +1,10 @@
+D:\Dropbox\Documents\Visual Studio 2013\Projects\DLLs\DataTools\DataTools\obj\Debug\DataTools.csprojAssemblyReference.cache
+D:\Dropbox\Documents\Visual Studio 2013\Projects\DLLs\DataTools\DataTools\bin\Debug\DataTools.dll
+D:\Dropbox\Documents\Visual Studio 2013\Projects\DLLs\DataTools\DataTools\bin\Debug\DataTools.pdb
+D:\Dropbox\Documents\Visual Studio 2013\Projects\DLLs\DataTools\DataTools\obj\Debug\DataTools.dll
+D:\Dropbox\Documents\Visual Studio 2013\Projects\DLLs\DataTools\DataTools\obj\Debug\DataTools.pdb
+D:\Dropbox\Documents\Visual Studio\Projects\DLLs\DataTools\DataTools\bin\Debug\DataTools.dll
+D:\Dropbox\Documents\Visual Studio\Projects\DLLs\DataTools\DataTools\bin\Debug\DataTools.pdb
+D:\Dropbox\Documents\Visual Studio\Projects\DLLs\DataTools\DataTools\obj\Debug\DataTools.csprojAssemblyReference.cache
+D:\Dropbox\Documents\Visual Studio\Projects\DLLs\DataTools\DataTools\obj\Debug\DataTools.dll
+D:\Dropbox\Documents\Visual Studio\Projects\DLLs\DataTools\DataTools\obj\Debug\DataTools.pdb

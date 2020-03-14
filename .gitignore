@@ -1,0 +1,4 @@
+*.vs
+*.nuspec
+*.nupkg
+nuget.exe
