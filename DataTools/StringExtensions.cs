@@ -126,7 +126,7 @@ namespace DataTools
 
         public static string ToCurrency(this String value, string currencysymbol)
         {
-            NumberFormatInfo nfi = (NumberFormatInfo)CultureInfo.CurrentCulture.NumberFormat.Clone();
+            NumberFormatInfo nfi = new NumberFormatInfo();
             nfi.CurrencySymbol = currencysymbol + " ";
             nfi.CurrencyGroupSeparator = " ";
             nfi.CurrencyNegativePattern = 14;
@@ -135,7 +135,7 @@ namespace DataTools
         }
         public static string ToCurrency(this String value, string currencysymbol, int decimalplaces)
         {
-            NumberFormatInfo nfi = (NumberFormatInfo)CultureInfo.CurrentCulture.NumberFormat.Clone();
+            NumberFormatInfo nfi = new NumberFormatInfo();
             nfi.CurrencySymbol = currencysymbol + " ";
             nfi.CurrencyGroupSeparator = " ";
             nfi.CurrencyNegativePattern = 14;
@@ -144,18 +144,29 @@ namespace DataTools
         }
         public static string ToCurrency(this String value, string currencysymbol, int decimalplaces, string groupseperator)
         {
-            NumberFormatInfo nfi = (NumberFormatInfo)CultureInfo.CurrentCulture.NumberFormat.Clone();
+            NumberFormatInfo nfi = new NumberFormatInfo();
             nfi.CurrencySymbol = currencysymbol + " ";
             nfi.CurrencyGroupSeparator = groupseperator;
             nfi.CurrencyNegativePattern = 14;
 
             return String.Format(nfi, "{0:C}", Math.Round(decimal.Parse(value), decimalplaces)).Trim();
         }
-        public static string ToCurrency(this String value, string currencysymbol, int decimalplaces, string groupseperator, int currencynegativepattern)
+        public static string ToCurrency(this String value, string currencysymbol, int decimalplaces, string groupseperator, string decimalseparator)
         {
-            NumberFormatInfo nfi = (NumberFormatInfo)CultureInfo.CurrentCulture.NumberFormat.Clone();
+            NumberFormatInfo nfi = new NumberFormatInfo();
             nfi.CurrencySymbol = currencysymbol + " ";
             nfi.CurrencyGroupSeparator = groupseperator;
+            nfi.CurrencyNegativePattern = 14;
+            nfi.NumberDecimalSeparator = decimalseparator;
+
+            return String.Format(nfi, "{0:C}", Math.Round(decimal.Parse(value), decimalplaces)).Trim();
+        }
+        public static string ToCurrency(this String value, string currencysymbol, int decimalplaces, string groupseperator, string decimalseparator, int currencynegativepattern)
+        {
+            NumberFormatInfo nfi = new NumberFormatInfo();
+            nfi.CurrencySymbol = currencysymbol + " ";
+            nfi.CurrencyGroupSeparator = groupseperator;
+            nfi.NumberDecimalSeparator = decimalseparator;
             nfi.CurrencyNegativePattern = currencynegativepattern;
 
             return String.Format(nfi, "{0:C}", Math.Round(decimal.Parse(value), decimalplaces)).Trim();
